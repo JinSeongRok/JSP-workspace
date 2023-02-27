@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +7,9 @@
 <title>Action Tag</title>
 </head>
 <body>
-	<h3>이 파일은 first.jsp 입니다.</h3>
-	<jsp:include page="second.jsp" flush="false" >
-		<jsp:param name="date" value="<%= new java.util.Date() %>" />
-	</jsp:include>
+	<h2>include 액션 태그</h2>
+	<jsp:include page="include_date.jsp" flush="true" />
+	<p>------------------------------------------------
 	
-	<p>Java Server Page</p>
 </body>
 </html>
