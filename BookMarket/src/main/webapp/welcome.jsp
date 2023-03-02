@@ -9,16 +9,10 @@
 <title>Welcome</title>	
 </head>
 <body>
-	<nav class = "navbar navbar-expand navbar- dark bg-dark">
-		<div class = "container">
-			<div class = "navbar-header">
-				<a class = "navbar-brand" href="./welcome.jsp">Home</a>
-			</div>
-		</div>
-	</nav>
 	<%! String greeting = "Book Market Mall"; 
 		String tagline = "Welcome to Book Market!";
 	%>
+	<%@ include file="menu.jsp" %>
 	<div class = "jumbotron">
 		<div class = "container">
 			<h1 class = "display-3">
@@ -36,7 +30,6 @@
 		</div>
 	</div>
 	</main>
-		
-
+	<%@ include file="footer.jsp" %>
 </body>
 </html>
