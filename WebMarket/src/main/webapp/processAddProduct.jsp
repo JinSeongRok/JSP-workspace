@@ -1,22 +1,19 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.oreilly.servlet.*"%>
 <%@ page import="com.oreilly.servlet.multipart.*"%>
 <%@ page import="java.util.*" %>
 <%@ page import="dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
-
 <%
 	request.setCharacterEncoding("UTF-8");
-
+	
 	String filename = "";
-	//String realFolder = "./resources/images/";
 	String realFolder = "C:\\Users\\codepc\\JSP-workspace\\WebMarket\\src\\main\\webapp\\resources\\images";
 	int maxSize = 5 * 1024 * 1024;
 	String encType = "utf-8";
 	
-	MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
+	MultipartRequest multi = new MultipartRequest(request, realFolder,maxSize, encType, new DefaultFileRenamePolicy());
 	
-
 	String productId = multi.getParameter("productId");
 	String name = multi.getParameter("name");
 	String unitPrice = multi.getParameter("unitPrice");
@@ -28,20 +25,20 @@
 	
 	Integer price;
 	
-	if(unitPrice.isEmpty())
+	if(unitPrice.isEmpty()) 
 		price = 0;
 	else
 		price = Integer.valueOf(unitPrice);
 	
 	long stock;
 	
-	if(unitsInStock.isEmpty())
+	if(unitsInStock.isEmpty()) 
 		stock = 0;
 	else
 		stock = Long.valueOf(unitsInStock);
 	
 	Enumeration files = multi.getFileNames();
-	String fname = (String) files.nextElement();
+	String fname = (String)files.nextElement();
 	String fileName = multi.getFilesystemName(fname);
 	
 	ProductRepository dao = ProductRepository.getInstance();
