@@ -1,0 +1,18 @@
+show databases;
+
+use jspbookdb;
+
+create table member (
+	id int not null auto_increment,
+	name varchar(100) not null,
+	passwd varchar(60) not null,
+	primary key(id)
+);
+
+show tables;
+
+desc member;
+
+alter table member add phone varchar(100);
+
+

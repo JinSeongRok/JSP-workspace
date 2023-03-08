@@ -18,7 +18,7 @@
 		response.sendRedirect("exceptionNoProductId.jsp");
 	}
 	
-	ArrayList<Product>) cartList = (ArrayList<Product>) session.getAttribute("cartlist");
+	ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
 	Product goodsQnt = new Product();
 	for (int i=0; i<cartList.size(); i++) {
 		goodsQnt = cartList.get(i);
