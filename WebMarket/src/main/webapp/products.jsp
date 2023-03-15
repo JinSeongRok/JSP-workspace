@@ -4,12 +4,9 @@
 <%@ page import="dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
 <%@ page import="java.sql.*" %>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
-<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"
-	href="./resources/css/bootstrap.min.css"/>
+<link rel="stylesheet"	href="./resources/css/bootstrap.min.css"/>
 <meta charset="UTF-8">
 <title>상품 목록</title>
 </head>

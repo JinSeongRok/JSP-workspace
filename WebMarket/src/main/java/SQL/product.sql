@@ -20,4 +20,15 @@ INSERT INTO product VALUES('P1234', 'iPhone 6s', 800000, '1334X750 Rentina HD di
 INSERT INTO product VALUES('P1235', 'LG PC gram', 1500000, '3-3-inch,IPS LED display, 5rd Generation Intel Core processor', 'Notebook', 'LG', 1000, 'new', 'P1235.png');
 INSERT INTO product VALUES('P1236', 'Galaxy Tab S', 900000, '3-3-inch, 212.8*125.6*6.6mm, Super AMOLED display, Octa-Core processor', 'Tablet', 'Samsung', 1000, 'new', 'P1236.png');
 
-
+CREATE table member (
+	id varchar(10) not null,			
+	password varchar(10) not null,		
+	name varchar(10) not null,			 
+	gender varchar(4),					
+	birth varchar(10),					
+	mail varchar(30),					 
+	phone varchar(20),					
+	address varchar(90),				 
+	regist_day varchar(50),				
+	primary key(id)						
+) default CHARSET=utf8;
